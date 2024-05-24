@@ -1,7 +1,7 @@
 import turtle
 
 class TicTacToeBoard:
-    def _init_(self, size=200):
+    def __init__(self, size=200):
         self.size = size
         self.turtle = turtle.Turtle()
 
