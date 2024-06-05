@@ -1,7 +1,7 @@
 import turtle
 pantalla = turtle.getscreen()
 t= turtle.Turtle()
-t.speed(6)
+t.speed(7)
 
 def dibujar_tablero():
     t.penup() #sube
@@ -26,6 +26,7 @@ def dibujar_tablero():
     t.pendown() #baja
     t.forward(600) #marca
     
+    
 #CIRCULOS
 def circulo(circ_marca):
     coordenadas = {
@@ -45,36 +46,16 @@ def circulo(circ_marca):
     t.pendown()
     t.circle(90)
     
-#EQUIS
-def equis(equis_marca):
-    coordenadas = {
-        "1": [-250,210],
-        "2":[0,210],
-        "3":[250,210],
-        "4":[-250,0],
-        "5":[0,0],
-        "6":[250,0],
-        "7":[-250,-210],
-        "8":[0,-210],
-        "9": [250,-210]
-    }
-    
-    t.penup()
-    t.goto(coordenadas[str(equis_marca)][0]-90,coordenadas[str(equis_marca)][1]+90)
-    t.pendown()
-    t.goto(coordenadas[str(equis_marca)][0]+90,coordenadas[str(equis_marca)][1]-90)
-    t.penup()
-    t.goto(coordenadas[str(equis_marca)][0]+90,coordenadas[str(equis_marca)][1]+90)
-    t.pendown()
-    t.goto(coordenadas[str(equis_marca)][0]-90,coordenadas[str(equis_marca)][1]-90)
-
-
 dibujar_tablero()
-circ_marca=int(input("o: "))
-circulo(circ_marca)
-equis_marca=int(input("x: "))
-equis(equis_marca)
+
+circulo(1)
+circulo(2)
+circulo(3)
+circulo(4)
+circulo(5)
+circulo(6)
+circulo(7)
+circulo(8)
+circulo(9)
 
 turtle.done()
-
-
